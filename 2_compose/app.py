@@ -17,7 +17,7 @@ def write(txt):
     res = {'txt': txt}
     return (jsonify(res))
 
-# add new key:val tp redis db
+# add new key:val to redis db
 @app.route('/post/<key>/<val>')
 def post(key, val):
     redis.set(key, val)
